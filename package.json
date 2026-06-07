@@ -1,0 +1,21 @@
+{
+   "name": "quiz-test-task",
+   "version": "1.0.0",
+   "private": true,
+   "description": "",
+   "scripts": {
+      "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue,green\" \"pnpm dev:backend\" \"pnpm dev:frontend\"",
+      "format": "prettier --write .",
+      "format:check": "prettier --check .",
+      "dev:backend": "pnpm --filter backend dev",
+      "dev:frontend": "pnpm --filter frontend dev"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "packageManager": "pnpm@11.5.2",
+   "devDependencies": {
+      "concurrently": "^10.0.3",
+      "prettier": "^3.8.3"
+   }
+}

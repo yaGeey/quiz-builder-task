@@ -1,0 +1,37 @@
+services:
+  backend:
+    image: node:24-slim
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: >
+      sh -c "
+      corepack enable pnpm &&
+      pnpm install &&
+      cd backend &&
+      npx prisma generate &&
+      npx prisma migrate deploy &&
+      pnpm dev
+      "
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - DATABASE_URL=file:./dev.db
+
+  frontend:
+    image: node:24-slim
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: >
+      sh -c "
+      corepack enable pnpm &&
+      pnpm install &&
+      cd frontend &&
+      pnpm dev --host 0.0.0.0
+      "
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend

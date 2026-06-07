@@ -1,0 +1,22 @@
+packages:
+  - "frontend"
+  - "backend"
+allowBuilds:
+  '@prisma/engines': true
+  better-sqlite3: true
+  esbuild: true
+  prisma: true
+minimumReleaseAgeExclude:
+  - '@eslint-react/ast@5.8.13'
+  - '@eslint-react/core@5.8.13'
+  - '@eslint-react/eslint-plugin@5.8.13'
+  - '@eslint-react/eslint@5.8.13'
+  - '@eslint-react/jsx@5.8.13'
+  - '@eslint-react/shared@5.8.13'
+  - '@eslint-react/var@5.8.13'
+  - eslint-plugin-react-dom@5.8.13
+  - eslint-plugin-react-jsx@5.8.13
+  - eslint-plugin-react-naming-convention@5.8.13
+  - eslint-plugin-react-rsc@5.8.13
+  - eslint-plugin-react-web-api@5.8.13
+  - eslint-plugin-react-x@5.8.13
