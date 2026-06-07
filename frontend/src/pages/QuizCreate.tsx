@@ -6,7 +6,7 @@ import { Plus } from 'lucide-react'
 import { useMutation } from '@tanstack/react-query'
 import axios from 'axios'
 import { QuizFormValues, quizSchema } from '../types'
-import QuestionCard from './QuestionCard'
+import QuestionCard from '../components/QuestionCard'
 
 export function QuizCreate() {
    const navigate = useNavigate()
