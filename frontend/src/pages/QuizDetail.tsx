@@ -1,4 +1,3 @@
-import { Suspense, useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
 import { useSuspenseQuery } from '@tanstack/react-query'
@@ -11,7 +10,6 @@ export function QuizDetail() {
       queryKey: ['quiz', id],
       queryFn: () => axios.get<Quiz>(`http://localhost:3001/quizzes/${id}`).then((res) => res.data),
    })
-   console.log(quiz)
 
    if (!quiz) return <p className="text-center mt-8 text-red-500">Quiz not found</p>
 

@@ -1,27 +1,18 @@
 {
+   "extends": "../tsconfig.base.json",
    "compilerOptions": {
-      "module": "esnext",
       "moduleResolution": "bundler",
-      "target": "esnext",
       "lib": ["DOM", "DOM.Iterable", "ESNext"],
-      "types": [],
+      "types": ["vite/client"],
 
       "noEmit": true,
       "sourceMap": true,
 
-      "noUncheckedIndexedAccess": false,
       "exactOptionalPropertyTypes": true,
       "strict": true,
 
       "jsx": "react-jsx",
       "isolatedModules": true,
-      "noUncheckedSideEffectImports": true,
-      "moduleDetection": "force",
-      "skipLibCheck": true,
-      "esModuleInterop": true,
-      "allowImportingTsExtensions": true,
-
-      "verbatimModuleSyntax": false
    },
-   "include": ["src/**/*", "./eslint.config.ts"]
+   "include": ["src/**/*"]
 }
