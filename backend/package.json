@@ -4,7 +4,8 @@
    "description": "",
    "type": "module",
    "scripts": {
-      "dev": "tsx watch src/index.ts"
+      "dev": "tsx watch src/index.ts",
+      "start:docker": "pnpm prisma migrate deploy && pnpm dev"
    },
    "keywords": [],
    "author": "",
